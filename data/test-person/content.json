@@ -1,0 +1,10 @@
+{
+    "name": "Test person",
+    "photo": "profile.png",
+    "quote": "I was born to be tested",
+    "about": "A long paragraph that describes me, but I have no words to describe myself.",
+    "links": {
+        "Facebook": "http://www.facebook.com/test.person",
+        "Twitter": "http://www.twitter.com/testPerson"
+    }
+}
