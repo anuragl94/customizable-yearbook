@@ -21,3 +21,15 @@ Each student can login with their credentials to change the CSS for their own pa
 2. Any 'important' tags given in the 'customized' CSS will be removed.
 
 3. All this generated CSS will be added to a new file which will be stored in the student's folder. 
+
+#Instructions
+
+* Clone the repository onto your system with suitable permissions.
+
+* Add a new virtualhost that points to the location of the cloned repository.
+
+* Reload apache2.
+
+* Make sure `mod_rewrite` and `mod_headers` modules are enabled.
+
+* You're good to go.
