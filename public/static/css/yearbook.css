@@ -3,7 +3,80 @@
     Author     : anurag
 */
 
+@font-face {
+    font-family: "als_script";
+    src: url("/static/font/als-script/alsscrp.ttf") format('truetype');
+}
+@font-face {
+    font-family: "helvetica_light";
+    src: url("/static/font/helveticaneue/HelveticaNeue Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: "chopin_script";
+    src: url("/static/font/chopin-script/ChopinScript.ttf") format('truetype');
+}
+@font-face {
+    font-family: "janda";
+    src: url("/static/font/janda-elegant-handwriting/JandaElegantHandwriting.ttf") format('truetype');
+}
+
 body {
     background-color: whitesmoke;
+}
+
+/*Specific to single page view*/
+
+.single-page {
+    margin: 20px;
+}
+
+#student-name {
+    font-family: "chopin_script";
+    display: inline-block;
+    font-weight: bold;
+    font-size: 64px;
+    color: black;
+    height: 150px;
+}
+
+#student-profile-picture {
+    display: inline-block;
+    border: white 10px solid;
+    box-shadow: 1px 1px 2px gray;
+    height: 150px;
+}
+
+#student-quote {
+    font-family: "chopin_script";
+    font-style: italic;
     color: gray;
+    font-size: 32px;
+}
+
+#student-about {
+    font-family: "chopin_script";
+    font-size: 32px;
+    color: black;
+}
+
+#student-social-links {
+    font-family: "helvetica_light";
+    font-size: 20px;
+}
+#student-social-links a {
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+    margin-right: 4px;
+    color: gray;
+    transition-duration: 0.3s;
+}
+#student-social-links a[data-domain=Facebook]:hover {
+    border-radius: 4px;
+    background-color: #3b5998;
+    color: white;
+}
+#student-social-links a[data-domain=Twitter]:hover {
+    border-radius: 4px;
+    background-color: #1da1f2;
+    color: white;
 }

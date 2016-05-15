@@ -19,18 +19,20 @@ $content = json_decode(file_get_contents("../data/" . $student . "/content.json"
     </head>
 
     <body>
-        <div class="row">
-            <div class="col-md-4" id="profile-picture">
+        <div class="single-page">
+            <div id="student-profile-picture">
                 <img src="/resources/<?= $student ?>/photo">
             </div>
-            <div class="col-md-8">
-                <h1>
-                    <?= $content->name ?>
-                </h1>
+            <div id="student-name"><?= $content->name ?></div>
+            <div id="student-quote"><?= $content->quote ?></div>
+            <div id="student-about"><?= $content->about ?></div>
+            <div id="student-social-links">
+                <?php
+                foreach ($content->links as $domain => $link) {
+                    echo "<a href=$link data-domain=$domain>$domain</a>";
+                }
+                ?>
             </div>
-        </div>
-        <div class="row">
-            <?= $content->about ?>
         </div>
 
         <script src="/static/js/lib/jquery-2.1.1.js"></script>
