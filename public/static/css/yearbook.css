@@ -80,3 +80,20 @@ body {
     background-color: #1da1f2;
     color: white;
 }
+
+/* This is styling for edit page */
+input#student-name {
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea#student-quote, textarea#student-about {
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+}

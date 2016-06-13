@@ -1,10 +1,1 @@
-{
-    "name": "Test person",
-    "photo": "profile.png",
-    "quote": "I was born to be tested",
-    "about": "A long paragraph that describes me, but I have no words to describe myself.",
-    "links": {
-        "Facebook": "http://www.facebook.com/test.person",
-        "Twitter": "http://www.twitter.com/testPerson"
-    }
-}
+{"name":"Test person","photo":"profile.png","quote":"Smartass quote to look cool","about":"A long paragraph that describes me, lorem ipsum and other stuff because I want a long sentence for testing.","links":{"Facebook":"http:\/\/www.facebook.com\/test.person","Twitter":"http:\/\/www.twitter.com\/testPerson"}}

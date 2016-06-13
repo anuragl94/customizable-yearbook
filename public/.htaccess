@@ -5,7 +5,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/.*.js
 
+ErrorDocument 404 /error_pages/404.html
+
+RewriteRule ^profile$ edit.php [L]
 RewriteRule ^student/[a-zA-Z0-9-]+?$ student.php [L]
 RewriteRule ^resources/[a-zA-Z0-9-]+/.*$ utils.php [L]
-
-ErrorDocument 404 /error_pages/404.html
