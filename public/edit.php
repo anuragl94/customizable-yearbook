@@ -50,25 +50,19 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
 
         <body>
             <div class="single-page">
-                <form action="edit.php" method="POST">
-                    <div id="student-profile-picture">
-                        <img src="/resources/<?= $student ?>/photo">
-                    </div>
-                    <input id="student-name" name="name" value="<?= $content->name ?>" />
-                    <br>
-                    <textarea id="student-quote" name="quote"><?= $content->quote ?></textarea>
-                    <br>
-                    <textarea id="student-about" name="about"><?= $content->about ?></textarea>
-                    <div id="student-social-links">
-                        <?php
-                        foreach ($content->links as $domain => $link) {
-                            echo "<a href=$link data-domain=$domain>$domain</a>";
-                        }
-                        ?>
-                    </div>
-                    <br>
-                    <input type="submit" value="Save"/>
-                </form>
+                <div id="student-profile-picture" class="editable">
+                    <img src="/resources/<?= $student ?>/photo">
+                </div>
+                <div id="student-name" class="editable"><?= $content->name ?></div>
+                <div id="student-quote" class="editable"><?= $content->quote ?></div>
+                <div id="student-about" class="editable"><?= $content->about ?></div>
+                <div id="student-social-links" class="editable">
+                    <?php
+                    foreach ($content->links as $domain => $link) {
+                        echo "<a>$domain</a>";
+                    }
+                    ?>
+                </div>
             </div>
 
             <script src="/static/js/lib/jquery-2.1.1.js"></script>
