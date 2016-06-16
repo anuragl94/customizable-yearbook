@@ -32,4 +32,14 @@ Each student can login with their credentials to change the CSS for their own pa
 
 * Make sure `mod_rewrite` and `mod_headers` modules are enabled.
 
+* Import db.sql into mySQL into the database 'yearbook'
+
 * You're good to go.
+
+#Work in progress
+
+1. These are all the pages currenty available: (Navigation, sorry to say, is far from fluidic right now)
+    * /student/test-person: How a student's profile would look publicly
+    * /login.php: Login to create a PHP session
+    * /logout.php: Destroy the current session
+    * /edit.php: If you are logged in, then you can edit the content of your own profile
