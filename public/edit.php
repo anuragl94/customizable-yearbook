@@ -50,7 +50,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
 
         <body>
             <div class="single-page">
-                <div class="row">
+                <div class="group">
                     <div id="student-profile-picture" class="editable">
                         <img src="/resources/<?= $student ?>/photo">
                     </div>

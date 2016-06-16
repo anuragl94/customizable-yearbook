@@ -20,10 +20,12 @@ $content = json_decode(file_get_contents("../data/" . $student . "/content.json"
 
     <body>
         <div class="single-page">
-            <div id="student-profile-picture">
-                <img src="/resources/<?= $student ?>/photo">
+            <div class="group">
+                <div id="student-profile-picture">
+                    <img src="/resources/<?= $student ?>/photo">
+                </div>
+                <div id="student-name"><?= $content->name ?></div>
             </div>
-            <div id="student-name"><?= $content->name ?></div>
             <div id="student-quote"><?= $content->quote ?></div>
             <div id="student-about"><?= $content->about ?></div>
             <div id="student-social-links">

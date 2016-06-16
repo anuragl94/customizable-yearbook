@@ -22,6 +22,8 @@
 
 body {
     background-color: whitesmoke;
+    background: url("/static/img/bg_2.jpg") no-repeat;
+    background-size: cover;
 }
 
 /*Specific to single page view*/
@@ -36,23 +38,24 @@ body {
     font-weight: bold;
     font-size: 64px;
     color: black;
-    height: 150px;
     padding: 10px;
 }
 
 #student-profile-picture {
-    background-color: white;
+    background-color: black;
     display: inline-block;
-    border: white 10px solid;
-    box-shadow: 1px 1px 2px gray;
-    height: 150px;
     padding: 10px;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#student-profile-picture img {
+    height: 120px;
 }
 
 #student-quote {
     font-family: "chopin_script";
     font-style: italic;
-    color: gray;
+    color: #666666;
     font-size: 32px;
     padding: 10px;
 }
@@ -86,6 +89,14 @@ body {
     border-radius: 4px;
     background-color: #1da1f2;
     color: white;
+}
+
+.group {
+    padding: 10px;
+}
+
+.group * {
+    vertical-align: middle;
 }
 
 /* This is styling for edit page. Not used anymore */
