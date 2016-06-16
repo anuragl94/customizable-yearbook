@@ -50,10 +50,12 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
 
         <body>
             <div class="single-page">
-                <div id="student-profile-picture" class="editable">
-                    <img src="/resources/<?= $student ?>/photo">
+                <div class="row">
+                    <div id="student-profile-picture" class="editable">
+                        <img src="/resources/<?= $student ?>/photo">
+                    </div>
+                    <div id="student-name" class="editable"><?= $content->name ?></div>
                 </div>
-                <div id="student-name" class="editable"><?= $content->name ?></div>
                 <div id="student-quote" class="editable"><?= $content->quote ?></div>
                 <div id="student-about" class="editable"><?= $content->about ?></div>
                 <div id="student-social-links" class="editable">
