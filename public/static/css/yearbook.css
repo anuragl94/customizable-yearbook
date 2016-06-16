@@ -128,3 +128,61 @@ textarea#student-quote, textarea#student-about {
     background-color: rgba(255,255,255,0.8);
     cursor: url("/static/img/pencil.png"), default;
 }
+
+/* Some UI stuff now */
+
+.modal-dialog {
+    border-radius: 0;
+    top: 20vh;
+}
+
+.modal input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.modal textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+.modal-header h4 {
+    text-align: center;
+}
+
+#prompt-text .modal-content {
+    width: 400px;
+}
+
+#alert .modal-content {
+    width: 400px;
+}
+
+#alert p {
+    text-align: center;
+}
+
+/* Toolbar stuff */
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px 5px 5px 10px;
+    border-radius: 0 0 0 10px;
+}
+
+.toolbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar a:hover {
+    cursor: pointer;
+}

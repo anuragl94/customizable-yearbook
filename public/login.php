@@ -8,10 +8,10 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
     $password = isset($_POST['password']) ? filter_input(INPUT_POST, 'password') : NULL;
 
     if (empty($username) || empty($password)) {
-        print_r(array(
+        print_r(json_encode(array(
             "status" => "error",
             "message" => "Invalid credentials"
-        ));
+        )));
         die();
     }
 
@@ -21,20 +21,20 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
     $results = database_query($query);
 
     if ($results->num_rows === 0) {
-        print_r(array(
+        print_r(json_encode(array(
             "status" => "error",
             "message" => "Login failed. USN/password mismatch"
-        ));
+        )));
         die();
     } else {
         session_start();
         $data = $results->fetch_assoc();
         $_SESSION['usn'] = $data['usn'];
         $_SESSION['url'] = $data['url'];
-        print_r(array(
+        print_r(json_encode(array(
             "status" => "success",
             "message" => "Login successful"
-        ));
+        )));
     }
 } else {
     ?>

@@ -21,17 +21,17 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
     }
 
     file_put_contents("../data/" . $student . "/content.json", json_encode($content));
-    file_put_contents('../updates.log', $_SESSION['usn'] . " updated profile", FILE_APPEND);
-    print_r(array(
+    file_put_contents('../updates.log', $_SESSION['usn'] . " updated profile\n", FILE_APPEND);
+    print_r(json_encode(array(
         "status" => "success",
         "message" => "Data has been updated"
-    ));
+    )));
 } else {
     if (!isset($_SESSION['usn'])) {
-        print_r(array(
+        print_r(json_encode(array(
             "status" => "error",
             "message" => "You must be logged in for this"
-        ));
+        )));
         die();
     }
     $student = $_SESSION['url'];
@@ -65,6 +65,57 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
                     }
                     ?>
                 </div>
+            </div>
+
+            <div class="templates">
+                <div id="alert" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Okay</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="prompt-text" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary accept" data-dismiss="modal">Accept</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="prompt-textarea" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <textarea></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary accept" data-dismiss="modal">Accept</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <a id="save-changes">Save</a>
             </div>
 
             <script src="/static/js/lib/jquery-2.1.1.js"></script>
