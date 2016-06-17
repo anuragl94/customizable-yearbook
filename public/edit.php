@@ -21,7 +21,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
     }
 
     file_put_contents("../data/" . $student . "/content.json", json_encode($content));
-    file_put_contents('../updates.log', $_SESSION['usn'] . " updated profile\n", FILE_APPEND);
+    file_put_contents('../updates.log', "[" . date("G:i - d M, Y") . "] " . $_SESSION['usn'] . " updated profile\n", FILE_APPEND);
     print_r(json_encode(array(
         "status" => "success",
         "message" => "Data has been updated"
