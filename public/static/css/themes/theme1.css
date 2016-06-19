@@ -1,0 +1,63 @@
+body {
+    background: url("/static/img/bg_2.jpg") no-repeat;
+    background-size: cover;
+}
+
+#student-name {
+    font-family: "chopin_script";
+    display: inline-block;
+    font-weight: bold;
+    font-size: 64px;
+    color: black;
+    padding: 10px;
+}
+
+#student-profile-picture {
+    background-color: black;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#student-profile-picture img {
+    height: 120px;
+}
+
+#student-quote {
+    font-family: "chopin_script";
+    font-style: italic;
+    color: #666666;
+    font-size: 32px;
+    padding: 10px;
+}
+
+#student-about {
+    font-family: "chopin_script";
+    font-size: 32px;
+    color: black;
+    padding: 10px;
+}
+
+#student-social-links {
+    font-family: "helvetica_light";
+    font-size: 20px;
+    padding: 10px;
+}
+#student-social-links a {
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+    margin-right: 4px;
+    color: gray;
+    transition-duration: 0.3s;
+    padding: 10px;
+}
+#student-social-links a[data-domain=Facebook]:hover {
+    border-radius: 4px;
+    background-color: #3b5998;
+    color: white;
+}
+#student-social-links a[data-domain=Twitter]:hover {
+    border-radius: 4px;
+    background-color: #1da1f2;
+    color: white;
+}

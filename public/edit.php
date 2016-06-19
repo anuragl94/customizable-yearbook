@@ -44,6 +44,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
             <title>Yearbook | Your profile</title>
             <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css">
             <link rel="stylesheet" href="/static/css/yearbook.css">
+            <link rel="stylesheet" href="/static/css/themes/theme1.css">
             <!--The following line is the custom CSS for each student-->
             <link rel="stylesheet" href="/resources/<?= $student ?>/stylesheet">
         </head>
@@ -68,6 +69,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
             </div>
 
             <div class="templates">
+                <!--Just a normal alert-->
                 <div id="alert" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-content">
                         <div class="modal-header">
@@ -82,6 +84,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
                         </div>
                     </div>
                 </div>
+                <!--Takes an input text-->
                 <div id="prompt-text" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-content">
                         <div class="modal-header">
@@ -97,6 +100,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
                         </div>
                     </div>
                 </div>
+                <!--Takes input text for larger content-->
                 <div id="prompt-textarea" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-content">
                         <div class="modal-header">
@@ -121,6 +125,7 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD') === "POST") {
             <script src="/static/js/lib/jquery-2.1.1.js"></script>
             <script src="/static/js/lib/jquery-ui-1.10.4.min.js"></script>
             <script src="/static/js/lib/bootstrap.min.js"></script>
+            <script src="/static/js/theme2.js"></script>
             <script src="/static/js/yearbook.js"></script>
         </body>
     </html>
